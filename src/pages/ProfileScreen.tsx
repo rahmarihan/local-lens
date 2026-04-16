@@ -13,21 +13,24 @@ const ProfileScreen = () => {
 
   return (
     <div className="min-h-screen bg-background pb-20">
-      {/* Cover + Avatar */}
-      <div className="relative h-36 bg-gradient-to-br from-primary to-secondary">
-        <button onClick={() => navigate('/settings')} className="absolute top-4 right-4 w-9 h-9 rounded-full bg-background/30 backdrop-blur-sm flex items-center justify-center">
-          <Settings size={16} className="text-primary-foreground" />
+      {/* Header bar */}
+      <div className="px-5 pt-6 pb-4 flex items-center justify-between">
+        <h1 className="text-lg font-extrabold">Profile</h1>
+        <button onClick={() => navigate('/settings')} className="w-9 h-9 rounded-full bg-muted flex items-center justify-center">
+          <Settings size={16} />
         </button>
       </div>
-      <div className="px-5 -mt-10 relative z-10">
-        <div className="flex items-end gap-3">
-          <div className="w-20 h-20 rounded-full bg-background border-4 border-background flex items-center justify-center text-3xl shadow-elevated">🧑🏽</div>
-          <div className="flex-1 pb-1">
+
+      <div className="px-5">
+        {/* Avatar + Name */}
+        <div className="flex items-center gap-4">
+          <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center text-3xl">🧑🏽</div>
+          <div className="flex-1">
             <div className="flex items-center gap-2">
-              <h1 className="text-lg font-extrabold">Ahmed Mostafa</h1>
+              <h2 className="text-lg font-extrabold">Ahmed Mostafa</h2>
               <span className="flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-gold/20 text-gold text-[10px] font-bold"><Crown size={10} /> Super User</span>
             </div>
-            <p className="text-xs text-muted-foreground">Exploring Cairo one hidden gem at a time ✨</p>
+            <p className="text-xs text-muted-foreground mt-0.5">Exploring Cairo one hidden gem at a time ✨</p>
             <p className="text-[10px] text-muted-foreground mt-0.5">Joined March 2024</p>
           </div>
         </div>
