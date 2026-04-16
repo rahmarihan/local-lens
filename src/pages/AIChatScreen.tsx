@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { Send, Mic, Sparkles } from 'lucide-react';
+import { Send, Mic, Sparkles, ArrowLeft } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { chatMessages } from '@/data/places';
 
 const quickChips = ['Cheap café near me', 'Hidden gems tonight', 'Best local food'];
 
 const AIChatScreen = () => {
+  const navigate = useNavigate();
   const [messages, setMessages] = useState(chatMessages);
   const [input, setInput] = useState('');
 
@@ -21,6 +23,9 @@ const AIChatScreen = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <div className="px-5 pt-6 pb-3 border-b border-border flex items-center gap-3">
+        <button onClick={() => navigate(-1)} className="w-9 h-9 rounded-full bg-muted flex items-center justify-center">
+          <ArrowLeft size={18} />
+        </button>
         <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
           <Sparkles size={18} className="text-secondary" />
         </div>
