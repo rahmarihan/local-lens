@@ -66,21 +66,6 @@ const LoginScreen = () => {
           Log In
         </button>
 
-        <div className="flex items-center gap-3 my-4">
-          <div className="flex-1 h-px bg-border" />
-          <span className="text-xs text-muted-foreground">or</span>
-          <div className="flex-1 h-px bg-border" />
-        </div>
-
-        <div className="space-y-2">
-          <button className="w-full py-3 rounded-xl border border-border font-semibold text-sm flex items-center justify-center gap-2">
-            <span>🍎</span> Continue with Apple
-          </button>
-          <button className="w-full py-3 rounded-xl border border-border font-semibold text-sm flex items-center justify-center gap-2">
-            <span>G</span> Continue with Google
-          </button>
-        </div>
-
         <p className="text-center text-sm text-muted-foreground mt-4">
           Don't have an account?{' '}
           <button onClick={() => navigate('/signup')} className="text-primary font-semibold">Sign Up</button>
