@@ -8,7 +8,7 @@ const plans = [
     name: 'Explorer',
     price: 'Free',
     period: '',
-    features: ['5 pins limit', '3 place submissions/month', 'Basic AI recommendations', 'Chat read-only after limit'],
+    features: ['5 pins limit', '3 place submissions/month', 'Basic AI recommendations', 'Limited chat access'],
     isCurrent: true,
     cta: 'Current Plan',
   },
