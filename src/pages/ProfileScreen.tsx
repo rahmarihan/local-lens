@@ -19,7 +19,7 @@ const ProfileScreen = () => {
           <Settings size={16} className="text-primary-foreground" />
         </button>
       </div>
-      <div className="px-5 -mt-10">
+      <div className="px-5 -mt-10 relative z-10">
         <div className="flex items-end gap-3">
           <div className="w-20 h-20 rounded-full bg-background border-4 border-background flex items-center justify-center text-3xl shadow-elevated">🧑🏽</div>
           <div className="flex-1 pb-1">
