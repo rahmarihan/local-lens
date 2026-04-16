@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Settings, Edit2, MapPin, Star, Bookmark, MessageCircle, Crown, Heart } from 'lucide-react';
+import { Settings, Edit2, MapPin, Star, Bookmark, MessageCircle, Crown, Heart, Sparkles, Send, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import BottomNav from '@/components/BottomNav';
 import PlaceCard from '@/components/PlaceCard';
@@ -54,6 +54,28 @@ const ProfileScreen = () => {
         <button onClick={() => navigate('/edit-profile')} className="w-full mt-4 py-2.5 rounded-xl border border-border text-sm font-semibold flex items-center justify-center gap-2">
           <Edit2 size={14} /> Edit Profile
         </button>
+
+        {/* Quick links */}
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          {[
+            { label: 'Super User', icon: Crown, path: '/super-user', color: 'text-gold' },
+            { label: 'Plans', icon: Sparkles, path: '/plans', color: 'text-primary' },
+            { label: 'AI Guide', icon: Sparkles, path: '/ai-chat', color: 'text-secondary' },
+            { label: 'Messages', icon: Send, path: '/messages', color: 'text-primary' },
+          ].map((item) => (
+            <button
+              key={item.label}
+              onClick={() => navigate(item.path)}
+              className="flex items-center justify-between p-3 rounded-xl bg-card shadow-card active:scale-[0.98] transition-transform"
+            >
+              <div className="flex items-center gap-2">
+                <item.icon size={16} className={item.color} />
+                <span className="text-xs font-semibold">{item.label}</span>
+              </div>
+              <ChevronRight size={14} className="text-muted-foreground" />
+            </button>
+          ))}
+        </div>
 
         {/* Tabs */}
         <div className="flex gap-1 mt-5 bg-muted rounded-xl p-1">
