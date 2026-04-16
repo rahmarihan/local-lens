@@ -15,6 +15,7 @@ import AIChatScreen from "./pages/AIChatScreen";
 import NotificationsScreen from "./pages/NotificationsScreen";
 import ChatListScreen, { ChatDetailScreen } from "./pages/ChatScreen";
 import ProfileScreen from "./pages/ProfileScreen";
+import EditProfileScreen from "./pages/EditProfileScreen";
 import SettingsScreen from "./pages/SettingsScreen";
 import SuperUserScreen from "./pages/SuperUserScreen";
 import PlansScreen from "./pages/PlansScreen";
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/messages" element={<ChatListScreen />} />
           <Route path="/chat/:id" element={<ChatDetailScreen />} />
           <Route path="/profile" element={<ProfileScreen />} />
+          <Route path="/edit-profile" element={<EditProfileScreen />} />
           <Route path="/settings" element={<SettingsScreen />} />
           <Route path="/super-user" element={<SuperUserScreen />} />
           <Route path="/plans" element={<PlansScreen />} />
