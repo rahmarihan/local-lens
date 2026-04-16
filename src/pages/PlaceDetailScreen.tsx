@@ -94,7 +94,7 @@ const PlaceDetailScreen = () => {
                 </div>
               </div>
 
-              <button className="w-full py-3 rounded-xl bg-secondary text-secondary-foreground font-semibold text-sm flex items-center justify-center gap-2">
+              <button onClick={() => navigate(`/chat/${place.id}`)} className="w-full py-3 rounded-xl bg-secondary text-secondary-foreground font-semibold text-sm flex items-center justify-center gap-2">
                 <MessageCircle size={16} /> Chat with Contributor
               </button>
             </div>
